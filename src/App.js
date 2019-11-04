@@ -35,10 +35,17 @@ class App extends Component {
   }
 
 
-  //stuck on delete
+  //delete had me stuck for a while
   deleteCourse = _ => {
     const { course } = this.state;
     fetch(`http://localhost:4000/courses/delete?name=${course.name}`)
+    .then(this.getCourses)
+    .catch(err => console.error(err))
+  }
+
+  updateCourse = _ => {
+    const { course } = this.state;
+    fetch(`http://localhost:4000/courses/update?name=${course.name}&description=${course.description}`)
     .then(this.getCourses)
     .catch(err => console.error(err))
   }
@@ -59,6 +66,7 @@ class App extends Component {
              onChange={e => this.setState({ course: { ...course, description: e.target.value}})}/>
              <button onClick={this.addCourse}> Add Course </button>
              <button onClick={this.deleteCourse}> Delete Course </button>
+             <button onClick={this.updateCourse}> Update Course Description</button>
           </div>
         
       </div>
