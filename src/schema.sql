@@ -13,7 +13,8 @@ PRIMARY KEY (id),
 UNIQUE KEY name (name)
 );
 
-/*INSERT into course(id,name,description,domain) */
+INSERT into course(id,name,description,domain)
+VALUES(1,"test_name","test_description","test_domain");
 
 /*SELECT * FROM course; */
 
