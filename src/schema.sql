@@ -14,7 +14,10 @@ UNIQUE KEY name (name)
 );
 
 INSERT into course(id,name,description,domain)
-VALUES(1,"test_name","test_description","test_domain");
+VALUES(1,"English Class","A study of a collection of books from C.S. Lewis","test_domain");
+
+INSERT into course(id,name,description,domain)
+VALUES(2,"Biology","Contains information regarding animal life","test_domain2");
 
 /*SELECT * FROM course; */
 
