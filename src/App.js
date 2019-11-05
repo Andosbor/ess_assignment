@@ -69,7 +69,7 @@ class App extends Component {
     .catch(err => console.error(err))
   }
 
-  renderCourse = ({course_id, name, description, test_name }) => <div className="courseBox"key={course_id}>{name}  |  {description} | test: {test_name}</div>
+  renderCourse = ({course_id, name, description, test_name }) => <div className="courseBox"key={course_id}>{name}  |  {description} | tests: {test_name}</div>
 
   renderTest = ({})
 
